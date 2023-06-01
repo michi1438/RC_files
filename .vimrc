@@ -6,6 +6,7 @@ colorscheme meta5
 
 set nocompatible
 set hidden
+set noswapfile
 
 set incsearch
 set hlsearch

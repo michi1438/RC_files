@@ -31,6 +31,7 @@ export PATH=$PATH:/home/michael/.local/bin/
 export LC_ALL=en_US.UTF-8
 
 source /usr/share/bash-completion/completions/git
+
 bind -s 'set completion-ignore-case on'
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
