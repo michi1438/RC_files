@@ -112,6 +112,7 @@ alias ardui_comp='arduino-cli compile --fqbn arduino:avr:uno'
 alias ardui_uplo='arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno'
 alias rmswaps='rm ~/.cache/vim/swap/*'
 alias xpdf='xpdf -rv -fullscreen'
+alias gdb='gdb -q'
 
 
 # Francinette
