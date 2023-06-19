@@ -51,6 +51,12 @@ let g:syntastic_c_norminette_args = '-R CheckTopCommentHeader'
 " Check errors when opening a file (disable to speed up startup time)
 let g:syntastic_check_on_open = 1
 
+" Active or passive file types...
+let g:syntastic_mode_map = {
+	\ "mode": "active",
+	\ "active_filetypes": ["C", "C++"],
+	\ "passive_filetypes": ["md"] }
+
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
@@ -110,6 +116,8 @@ inoremap <F1> <esc>:NERDTreeToggle<cr>
 inoremap <F2> <esc>:NERDTreeFind<cr>
 nnoremap <F3> :Files<cr>
 inoremap <F3> <esc>:Files<cr>
+nnoremap <F4> :mks! ~/Session.vim <cr>
+inoremap <F4> <esc>:mks! ~/Session.vim <cr>
 inoremap <c-w> <esc><c-w>
 nnoremap <c-w>s :vertical ter<cr>
 tnoremap <F1> <c-\><c-n>
@@ -144,6 +152,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 autocmd BufWritePost *.c silent !ctags -R .
+
+" Automatically load the session when entering vim
+" autocmd! VimEnter * if argc() == 0 && !exists("s:std_in") | source ~/Session.vim | endif
 
 " More Vimscripts code goes here.
 
