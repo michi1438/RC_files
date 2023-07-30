@@ -4,6 +4,10 @@
 
 # otherstuff specific to this computer LC_ALL=...
 
+if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec sway
+fi
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -90,7 +94,7 @@ alias ardui='arduino-cli'
 alias ardui_comp='arduino-cli compile --fqbn arduino:avr:uno'
 alias ardui_uplo='arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno'
 alias rmswaps='rm ~/.cache/vim/swap/*'
-alias xpdf='xpdf -rv -fullscreen'
+alias xpdf='xpdf -fullscreen'
 alias gdb='gdb -q'
 alias vimsess='vim -S ~/Session.vim'
 

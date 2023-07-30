@@ -45,6 +45,11 @@ let g:syntastic_c_norminette_exec = 'norminette'
 let g:c_syntax_for_h = 1
 let g:syntastic_c_include_dirs = ['include', '../include', '../../include', 'libft', '../libft/include', '../../libft/include']
 
+" include dirs cpp
+let g:syntastic_cpp_include_dirs = ['include', '../include', '../../include', 'libft', '../libft/include', '../../libft/include']
+let g:syntastic_cpp_compiler_options = ' -std=c+98 -Werror -Wall -Wextra'
+let g:syntastic_cpp_auto_refresh_includes = 1
+
 " Pass custom arguments to norminette (this one ignores 42header)
 let g:syntastic_c_norminette_args = '-R CheckTopCommentHeader'
 

@@ -4,10 +4,6 @@
 
 # otherstuff specific to this computer LC_ALL=...
 
-if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec sway
-fi
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
