@@ -97,7 +97,7 @@ case_sensitive_searching=off
 #    Ukrainian Cyrillic (cp866u)
 #    Ukrainian Cyrillic (KOI8-U)
 #    Cyrillic-Asian (PT154)
-character_set=IBM PC US codepage (cp437)
+character_set=Western (ISO-8859-1)
 
 # cookie_accept_domains and cookie_reject_domains are comma-delimited
 # lists of domains from which Lynx should automatically accept or reject
@@ -297,7 +297,7 @@ show_color=default
 # or color.  A value of "on" will set positioning to the left as the
 # default while a value of "off" will set 'hiding' of the cursor.
 # The default can be overridden via the -show_cursor command line toggle.
-show_cursor=on
+show_cursor=off
 
 # show_dotfiles specifies that the directory listing should include
 # "hidden" (dot) files/directories.  If set "on", this will be
@@ -315,7 +315,7 @@ show_dotfiles=off
 # statusline prompt instead of the menu seen in novice and intermediate
 # user modes.  When this option is set to "standard", the menu will be
 # presented regardless of user mode.
-sub_bookmarks=ADVANCED
+sub_bookmarks=OFF
 
 # user_mode specifies the users level of knowledge with Lynx.  The
 # default is "NOVICE" which displays two extra lines of help at the

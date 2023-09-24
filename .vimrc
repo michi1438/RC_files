@@ -23,6 +23,7 @@ set cursorline
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
+set formatoptions-=ro " for return in commented sections
 
 set showcmd
 set showmode
@@ -35,7 +36,7 @@ set wildmode=list:longest
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 " Enable norminette-vim (and gcc)
-let g:syntastic_c_checkers = ['norminette', 'gcc']
+let g:syntastic_c_checkers = ['norminette', 'gcc', 'g++']
 let g:syntastic_aggregate_errors = 1
 
 " Set the path to norminette (do no set if using norminette of 42 mac)
