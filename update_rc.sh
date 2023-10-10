@@ -15,6 +15,10 @@ do
 	fi
 	ln -f "$i" ~/
 done
+
+git add .
+git commit -m "UPDATE_RC.SH `uname -nro`"
+git push
 	
 #	cp ./backups/.bashrc  ./backups/.bashrc.old
 #	cp ./backups/.lynxrc  ./backups/.lynxrc.old 
