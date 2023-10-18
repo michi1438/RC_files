@@ -32,7 +32,6 @@ shopt -s checkwinsize
 #[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
-source /usr/share/bash-completion/completions/git
 
 bind -s 'set completion-ignore-case on'
 
