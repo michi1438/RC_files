@@ -1,3 +1,4 @@
+OS = $(shell uname)
 filetype on
 filetype plugin on
 filetype indent on
@@ -23,6 +24,7 @@ set cursorline
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
+set formatoptions-=ro " for return in commented sections
 
 set showcmd
 set showmode
@@ -82,7 +84,6 @@ let g:NERDTreeGitStatusIdicatorMapCustom = {
 			\ 'Unknown'	:'?',
 			\ }
 
-
 " PLUGINS ----------------------------------------------------------{{{
 call plug#begin('~/.vim/plugged')
 	Plug 'preservim/nerdtree' |
@@ -94,7 +95,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
 	Plug 'rafi/awesome-vim-colorschemes'
-	Plug 'mhinz/vim-startify'
 
 call plug#end()
 " Plugin code goes here.
@@ -102,7 +102,6 @@ call plug#end()
 " }}}
 
 " MAPPINGS ---------------------------------------------------------{{{
-
 inoremap hh <esc>
 let mapleader = "\\"
 nnoremap <leader>\ ``
@@ -130,9 +129,6 @@ inoremap <c-w> <esc><c-w>
 nnoremap <c-w>s :vertical ter<cr>
 tnoremap <F1> <c-\><c-n>
 tnoremap <F2> <c-\><c-n>:vertical ter<cr>
-
-set formatoptions-=r " for return in commented sections
-set formatoptions-=o " for return in commented sections
 
 let NERDTreeIgnore =['\.o$','\.a$', '\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', '\.pyc$', '\.odt$', '\.png$', '\.gif$', '\,db$']
 
@@ -162,11 +158,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "	Automatically close a tab if the only remaining window is NerdTree.
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-autocmd BufWritePost *.c silent !ctags -R .
-
-autocmd VimEnter * set formatoptions-=ro
-" for return in commented sections
-
 " Automatically load the session when entering vim
 " autocmd! VimEnter * if argc() == 0 && !exists("s:std_in") | source ~/Session.vim | endif
 
@@ -179,4 +170,5 @@ autocmd VimEnter * set formatoptions-=ro
 "Status bar code goes here.
 
 " }}}
+
 

@@ -162,7 +162,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "	Automatically close a tab if the only remaining window is NerdTree.
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-autocmd BufWritePost *.c silent !ctags -R .
+if has('unix')
+	autocmd BufWritePost *.c silent !ctags -R .
+endif
 
 autocmd VimEnter * set formatoptions-=ro
 " for return in commented sections
