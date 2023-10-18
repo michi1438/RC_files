@@ -11,3 +11,8 @@ export PATH=$PATH:/home/michael/.local/bin/
 export LC_ALL=en_US.UTF-8
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
+
+if [ -f ~/RC_files/.git-completion.bash ]; then
+  . ~/RC_files/.git-completion.bash
+fi
+
