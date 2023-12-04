@@ -1,6 +1,3 @@
-let uname = system('uname -s')
-let echo = system('echo -e')
-
 filetype on
 filetype plugin on
 filetype indent on
@@ -165,10 +162,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "	Automatically close a tab if the only remaining window is NerdTree.
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-if uname == "Linux"
-echo uname
 autocmd BufWritePost *.c silent !ctags -R .
-endif
 
 autocmd VimEnter * set formatoptions-=ro
 " for return in commented sections
