@@ -173,9 +173,6 @@ endif
 autocmd VimEnter * set formatoptions-=ro
 " for return in commented sections
 
-autocmd VimEnter * set formatoptions-=ro
-" for return in commented sections
-
 " Automatically load the session when entering vim
 " autocmd! VimEnter * if argc() == 0 && !exists("s:std_in") | source ~/Session.vim | endif
 
