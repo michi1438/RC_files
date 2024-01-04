@@ -32,6 +32,7 @@ shopt -s checkwinsize
 #[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
+source /usr/share/bash-completion/completions/git
 
 bind -s 'set completion-ignore-case on'
 
@@ -88,9 +89,11 @@ alias norm='norminette'
 alias ardui='arduino-cli'
 alias ardui_comp='arduino-cli compile --fqbn arduino:avr:uno'
 alias ardui_uplo='arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno'
+alias rmswaps='rm ~/.cache/vim/swap/*'
 alias xpdf='xpdf -fullscreen'
 alias gdb='gdb -q'
 alias vimsess='vim -S ~/Session.vim'
+alias scrshot='slurp | grim -g - screenshot.png'
 
 # Francinette
 alias francinette='sudo /root/francinette/tester.sh'
