@@ -91,7 +91,6 @@ alias ardui_uplo='arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno'
 alias xpdf='xpdf -fullscreen'
 alias gdb='gdb -q'
 alias vimsess='vim -S ~/Session.vim'
-alias scrshot='slurp | grim -g - screenshot.png'
 
 # Francinette
 alias francinette='sudo /root/francinette/tester.sh'
