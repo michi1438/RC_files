@@ -3,7 +3,7 @@
 #UPDATE_RC.SH_________________
 
 git pull
-declare -a arr=(".bashrc" ".lynxrc" ".xpdfrc" ".vimrc" ".bash_profile" ".gdbinit")
+declare -a arr=(".bashrc" ".lynxrc" ".xpdfrc" ".vimrc" ".bash_profile" ".gdbinit" ".vim_clang_tidy_config")
 
 for i in "${arr[@]}"
 do
