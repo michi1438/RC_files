@@ -7,11 +7,11 @@ declare -a arr=(".bashrc" ".lynxrc" ".xpdfrc" ".vimrc" ".bash_profile" ".gdbinit
 
 for i in "${arr[@]}"
 do
-	cp ./backups/"$i"  ./backups/"$i".old
-	cp ~/"$i" ./backups/
+	cp -r ./backups/"$i"  ./backups/"$i".old
+	cp -r  ~/"$i" ./backups/
 	if [ ! -e  "$i" ]
 	then
-		cp ~/"$i" ./
+		cp -r  ~/"$i" ./
 	fi
 	ln -f "$i" ~/
 done
