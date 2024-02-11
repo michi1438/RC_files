@@ -38,7 +38,7 @@ set wildmode=list:longest
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 " Enable norminette-vim (and gcc)
-let g:syntastic_c_checkers = ['norminette', 'gcc', 'g++']
+let g:syntastic_c_checkers = ['norminette', 'gcc']
 let g:syntastic_aggregate_errors = 1
 
 " Set the path to norminette (do no set if using norminette of 42 mac)
@@ -49,8 +49,11 @@ let g:c_syntax_for_h = 1
 let g:syntastic_c_include_dirs = ['include', '../include', '../../include', 'libft', '../libft/include', '../../libft/include']
 
 " include dirs cpp
+let g:syntastic_cpp_checkers = ["clang_tidy"]
+let g:syntastic_clang_tidy_config_file = ".vim_clang_tidy_config"
 let g:syntastic_cpp_include_dirs = ['include', '../include', '../../include', 'libft', '../libft/include', '../../libft/include']
-let g:syntastic_cpp_compiler_options = ' -std=c+98 -Werror -Wall -Wextra'
+let g:cpp_syntax_for_hpp = 1
+let g:cpp_syntax_for_tpp = 1
 let g:syntastic_cpp_auto_refresh_includes = 1
 
 " Pass custom arguments to norminette (this one ignores 42header)
@@ -106,11 +109,15 @@ call plug#end()
 
 " MAPPINGS ---------------------------------------------------------{{{
 
+
+" Must Haves
 inoremap hh <esc>
-let mapleader = "\\"
-nnoremap <leader>\ ``
-nnoremap <space> :
 nnoremap zz :w<CR>
+nnoremap <space> :
+
+
+nnoremap <leader>\ ``
+let mapleader = "\\"
 
 nnoremap o o<esc>
 nnoremap O O<esc>
@@ -185,4 +192,3 @@ autocmd VimEnter * set formatoptions-=ro
 "Status bar code goes here.
 
 " }}}
-

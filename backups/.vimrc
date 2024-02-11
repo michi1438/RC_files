@@ -50,7 +50,7 @@ let g:syntastic_c_include_dirs = ['include', '../include', '../../include', 'lib
 
 " include dirs cpp
 let g:syntastic_cpp_checkers = ["clang_tidy"]
-let g:syntastic_clang_tidy_config_file = ".vim_clang_tidy_config"
+let g:syntastic_clang_tidy_config_file = ".vim/linters/.vim_clang_tidy_config"
 let g:syntastic_cpp_include_dirs = ['include', '../include', '../../include', 'libft', '../libft/include', '../../libft/include']
 let g:cpp_syntax_for_hpp = 1
 let g:cpp_syntax_for_tpp = 1
