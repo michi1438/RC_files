@@ -88,6 +88,7 @@ let g:NERDTreeGitStatusIdicatorMapCustom = {
 			\ 'Unknown'	:'?',
 			\ }
 
+runtime "~/.vim/ftdetect/tpp.vim"
 
 " PLUGINS ----------------------------------------------------------{{{
 call plug#begin('~/.vim/plugged')
