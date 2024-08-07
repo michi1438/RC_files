@@ -76,25 +76,19 @@ alias l='ls -al'
 
 
 # other aliases
-alias SH0='shutdown 0'
-alias ssshd='systemctl restart sshd'
-alias sshtower="ssh michaeltower@91.69.16.29 -p 222"
-alias rmswaps="rm ~/.cache/vim/swap/*"
 alias vi='vim'
+
+alias SH0='shutdown 0'
 alias c='clear'
 alias r='reset'
-alias susp='systemctl suspend-then-hibernate; swaylock -fu -F -c 000000'
-alias norm='norminette'
+
+alias scrshot='slurp | grim -g - screenshot.png'
+
+alias sshserver="ssh root@192.168.1.252 -p 22"
+
 alias ardui='arduino-cli'
 alias ardui_comp='arduino-cli compile --fqbn arduino:avr:uno'
 alias ardui_uplo='arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno'
-alias xpdf='xpdf -fullscreen'
-alias gdb='gdb -q'
-alias vimsess='vim -S ~/Session.vim'
-alias scrshot='slurp | grim -g - screenshot.png'
-
-# Francinette
-alias francinette='sudo /root/francinette/tester.sh'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
