@@ -4,7 +4,7 @@
 
 git add -v .
 git commit -v -m "PULL -- UPDATE_RC.SH `uname -nro`"
-git pull -v
+git pull --no-rebase
 declare -a arr=(".config/qutebrowser/config.py" ".bashrc" ".lynxrc" ".xpdfrc" ".vimrc" ".bash_profile" ".gdbinit" ".vim_clang_tidy_config" ".vim")
 
 if [ ! -d "./backups/" ]; then
