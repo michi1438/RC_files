@@ -2,6 +2,8 @@
 #
 #UPDATE_RC.SH_________________
 
+git add -v .
+git commit -v -m "UPDATE_RC.SH `uname -nro`"
 git pull -v
 declare -a arr=(".config/qutebrowser/config.py" ".bashrc" ".lynxrc" ".xpdfrc" ".vimrc" ".bash_profile" ".gdbinit" ".vim_clang_tidy_config" ".vim")
 
