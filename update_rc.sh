@@ -5,6 +5,10 @@
 git pull -v
 declare -a arr=(".config/qutebrowser/config.py" ".bashrc" ".lynxrc" ".xpdfrc" ".vimrc" ".bash_profile" ".gdbinit" ".vim_clang_tidy_config" ".vim")
 
+if [ ! -d "./backups/" ]; then
+	mkdir ./backups/
+fi
+
 for i in "${arr[@]}"
 do
 	cp -vr ./backups/"$i"  ./backups/"$i".old
