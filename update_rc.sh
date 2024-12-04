@@ -11,7 +11,6 @@ fi
 
 for i in "${arr[@]}"
 do
-	cp -vr ./backups/"$i"  ./backups/"$i".old
 	cp -vr  ~/"$i" ./backups/
 	if [ ! -e  "$i" ]
 	then
