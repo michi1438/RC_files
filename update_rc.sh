@@ -26,6 +26,7 @@ do
 	ln -vf ./"$i" ~/
 done
 
+mkdir -v ~/.RC_backups/
 cp -vr ./backups/* -t ~/.RC_backups/
 
 git add -v .
