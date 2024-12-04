@@ -13,7 +13,7 @@ fi
 
 for i in "${arr[@]}"
 do
-	IS_DIFF=$(diff -br ./."$i" ~/"$i")
+	IS_DIFF=$(diff -br ./"$i" ~/"$i")
 	if [ ! -z "$IS_DIFF" ] ; then
 		date >> ./backups/"$i".diff
 		uname -nro >> ./backups/"$i".diff
