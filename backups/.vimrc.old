@@ -1,4 +1,5 @@
 let uname = system('uname -s')
+
 let echo = system('echo -e')
 
 filetype on
@@ -49,12 +50,12 @@ let g:c_syntax_for_h = 1
 let g:syntastic_c_include_dirs = ['include', '../include', '../../include', 'libft', '../libft/include', '../../libft/include']
 
 " include dirs cpp
-let g:syntastic_cpp_checkers = ["clang_tidy"]
-let g:syntastic_clang_tidy_config_file = ".vim/linters/.vim_clang_tidy_config"
-let g:syntastic_cpp_include_dirs = ['include', '../include', '../../include', 'libft', '../libft/include', '../../libft/include']
-let g:cpp_syntax_for_hpp = 1
-let g:cpp_syntax_for_tpp = 1
-let g:syntastic_cpp_auto_refresh_includes = 1
+"let g:syntastic_cpp_checkers = ["clang_tidy"]
+"let g:syntastic_clang_tidy_config_file = \".vim/linters/.vim_clang_tidy_config"
+"let g:syntastic_cpp_include_dirs = ['include', '../include', '../../include', 'libft', '../libft/include', '../../libft/include']
+"let g:cpp_syntax_for_hpp = 1
+"let g:cpp_syntax_for_tpp = 1
+"let g:syntastic_cpp_auto_refresh_includes = 1
 
 " Pass custom arguments to norminette (this one ignores 42header)
 let g:syntastic_c_norminette_args = '-R CheckTopCommentHeader'
@@ -88,19 +89,17 @@ let g:NERDTreeGitStatusIdicatorMapCustom = {
 			\ 'Unknown'	:'?',
 			\ }
 
-runtime "~/.vim/ftdetect/tpp.vim"
+source "/ftdetect/tpp.vim"
 
 " PLUGINS ----------------------------------------------------------{{{
 call plug#begin('~/.vim/plugged')
 	Plug 'preservim/nerdtree' |
 		  \ Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'xbeheydt/42-vim-stdheader'
-	Plug 'ggVGc/vim-fuzzysearch'
 	Plug 'alexandregv/norminette-vim'
-	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-	Plug 'junegunn/fzf.vim'
+	Plug 'vim-syntastic/syntastic'
+	"change for coc some day...
 	Plug 'rafi/awesome-vim-colorschemes'
-	Plug 'mhinz/vim-startify'
 
 call plug#end()
 " Plugin code goes here.
@@ -112,7 +111,7 @@ call plug#end()
 
 " Must Haves
 inoremap hh <esc>
-nnoremap zz :w<CR>
+" nnoremap zz :w<CR>
 nnoremap <space> :
 
 
