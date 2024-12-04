@@ -11,12 +11,14 @@ fi
 
 for i in "${arr[@]}"
 do
-	cp -vr  ~/"$i" ./backups/
+	date >> ./backups/"$i".diff
+	uname -nro >> ./backups/"$i".diff
+	diff -r ./."$i" ~/"$i" >> ./backups/"$i".diff
 	if [ ! -e  "$i" ]
 	then
 		cp -vr  ~/"$i" ./
 	fi
-	ln -zf "$i" ~/
+	ln -f "$i" ~/
 done
 
 git add -v .
