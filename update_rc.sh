@@ -17,7 +17,7 @@ do
 	if [ ! -z "$IS_DIFF" ] ; then
 		date >> ./backups/"$i".diff
 		uname -nro >> ./backups/"$i".diff
-		echo ${IS_DIFF} >> ./backups/"$i".diff
+		printf ${IS_DIFF} >> ./backups/"$i".diff
 	fi
 	if [ ! -e  "$i" ]
 	then
