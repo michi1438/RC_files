@@ -41,9 +41,13 @@ parse_git_branch()
 {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-
-prompt_color='\[\033[;33m\]'
-info_color='\[\033[1;31m\]'
+case "$(uname -n)" in
+	"tower")	prompt_color='\[\033[;33m\]'; info_color='\[\033[1;34m\]';;
+	"HOMESERVER")	prompt_color='\[\033[;33m\]'; info_color='\[\033[1;31m\]';;
+	"surface")	prompt_color='\[\033[;33m\]'; info_color='\[\033[1;32m\]';;
+	"M53")	prompt_color='\[\033[;33m\]'; info_color='\[\033[1;36m\]';;
+	*);;
+esac
 PS1="$prompt_color┌─$info_color(\u@\h)[\A] $prompt_color[\033[0;1m\]\w$prompt_color]\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \n$prompt_color└$info_color> \[\033[0m\]";
 unset prompt_color
 unset info_color
