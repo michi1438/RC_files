@@ -26,23 +26,8 @@ do
 	ln -vf ./"$i" ~/
 done
 
+cp -r ./backups/ ~/backups/
+
 git add -v .
 git commit -v -m "PUSH -- UPDATE_RC.SH `uname -nro`"
 git push
-	
-#	cp ./backups/.bashrc  ./backups/.bashrc.old
-#	cp ./backups/.lynxrc  ./backups/.lynxrc.old 
-#	cp ./backups/.xpdfrc  ./backups/.xpdfrc.old 
-#	cp ./backups/.vimrc  ./backups/.vimrc.old 
-#	cp ./backups/.bash_profile ./backups/.bash_profile.old
-#	cp ~/.bashrc ./backups/
-#	cp ~/.lynxrc ./backups/
-#	cp ~/.xpdfrc ./backups/
-#	cp ~/.vimrc ./backups/
-#	cp ~/.bash_profile ./backups/
-#
-#	ln -f .bashrc ~/
-#	ln -f .lynxrc ~/
-#	ln -f .xpdfrc ~/
-#	ln -f .vimrc ~/
-#	ln -f .bash_profile ~/
