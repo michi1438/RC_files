@@ -11,9 +11,12 @@ fi
 
 for i in "${arr[@]}"
 do
-	date >> ./backups/"$i".diff
-	uname -nro >> ./backups/"$i".diff
-	diff -r ./."$i" ~/"$i" >> ./backups/"$i".diff
+	IS_DIFF=$(diff -r ./."$i" ~/"$i")
+	if [ -z IS_DIFF ] ; then
+		date >> ./backups/"$i".diff
+		uname -nro >> ./backups/"$i".diff
+		echo ${IS_DIFF} >> ./backups/"$i".diff
+	fi
 	if [ ! -e  "$i" ]
 	then
 		cp -vr  ~/"$i" ./
