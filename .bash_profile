@@ -17,5 +17,3 @@ if [ -f ~/RC_files/.git-completion.bash ]; then
 fi
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
-
-#difference
