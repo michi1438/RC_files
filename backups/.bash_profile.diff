@@ -3,3 +3,13 @@ tower 6.6.63-1-lts GNU/Linux
 --- ./.bash_profile 2024-12-04 17:40:15.509051881 +0100 +++ /home/michaeltower/.bash_profile 2024-12-04 17:36:59.662385318 +0100 @@ -17,3 +17,5 @@ fi export BASH_SILENCE_DEPRECATION_WARNING=1 + +#difference
 Wed Dec  4 05:44:46 PM CET 2024
 tower 6.6.63-1-lts GNU/Linux
+Wed Dec  4 11:11:41 AM CET 2024
+HOMESERVER 6.6.61-1-lts GNU/Linux
+--- ./.bash_profile	2024-12-04 11:11:41.760791113 +0100
++++ /root/.bash_profile	2024-12-04 11:08:15.847463422 +0100
+@@ -17,3 +17,5 @@
+ fi
+ 
+ export BASH_SILENCE_DEPRECATION_WARNING=1
++
++#test
