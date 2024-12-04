@@ -26,7 +26,7 @@ do
 	ln -vf ./"$i" ~/
 done
 
-cp -vr ./backups/ ~/backups/
+cp -vr ./backups/ ~/.RC_backups/
 
 git add -v .
 git commit -v -m "PUSH -- UPDATE_RC.SH `uname -nro`"
