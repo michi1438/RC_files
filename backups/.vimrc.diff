@@ -1,0 +1,22 @@
+Wed Dec  4 05:58:10 PM CET 2024
+tower 6.6.63-1-lts GNU/Linux
+--- ./.vimrc	2024-12-04 17:58:10.475718036 +0100
++++ /home/michaeltower/.vimrc	2024-12-04 15:15:44.862389320 +0100
+@@ -6,7 +6,7 @@
+ filetype plugin on
+ filetype indent on
+ syntax on
+-colorscheme meta5  " If this colors is not found you need to copy .vim/plugged/awesome-vim-colorschemes/colors/ to .vim/colors/ maybe there is a better way...
++colorscheme meta5 
+ 
+ set nocompatible
+ set hidden
+@@ -21,7 +21,7 @@
+ set relativenumber
+ 
+ set nocursorcolumn
+-set colorcolumn=80
++"set colorcolumn=80
+ set cursorline
+ 
+ set shiftwidth=4
