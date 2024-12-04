@@ -86,9 +86,9 @@ alias scrshot='slurp | grim -g - screenshot.png'
 
 alias sshserver="ssh root@192.168.1.252 -p 22"
 
-alias ardui='arduino-cli'
-alias ardui_comp='arduino-cli compile --fqbn arduino:avr:uno'
-alias ardui_uplo='arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno'
+#alias ardui='arduino-cli'
+#alias ardui_comp='arduino-cli compile --fqbn arduino:avr:uno'
+#alias ardui_uplo='arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
