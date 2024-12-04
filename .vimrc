@@ -6,7 +6,7 @@ filetype on
 filetype plugin on
 filetype indent on
 syntax on
-colorscheme meta5 
+colorscheme meta5  " If this colors is not found you need to copy .vim/plugged/awesome-vim-colorschemes/colors/ to .vim/colors/ maybe there is a better way...
 
 set nocompatible
 set hidden
@@ -21,7 +21,7 @@ set number
 set relativenumber
 
 set nocursorcolumn
-"set colorcolumn=80
+set colorcolumn=80
 set cursorline
 
 set shiftwidth=4
