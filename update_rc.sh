@@ -2,22 +2,22 @@
 #
 #UPDATE_RC.SH_________________
 
-git pull
-declare -a arr=(".bashrc" ".lynxrc" ".xpdfrc" ".vimrc" ".bash_profile" ".gdbinit" ".vim_clang_tidy_config" ".vim")
+git pull -v
+declare -a arr=(".config/qutebrowser/config.py" ".bashrc" ".lynxrc" ".xpdfrc" ".vimrc" ".bash_profile" ".gdbinit" ".vim_clang_tidy_config" ".vim")
 
 for i in "${arr[@]}"
 do
-	cp -r ./backups/"$i"  ./backups/"$i".old
-	cp -r  ~/"$i" ./backups/
+	cp -vr ./backups/"$i"  ./backups/"$i".old
+	cp -vr  ~/"$i" ./backups/
 	if [ ! -e  "$i" ]
 	then
-		cp -r  ~/"$i" ./
+		cp -vr  ~/"$i" ./
 	fi
-	ln -f "$i" ~/
+	ln -zf "$i" ~/
 done
 
-git add .
-git commit -m "UPDATE_RC.SH `uname -nro`"
+git add -v .
+git commit -v -m "UPDATE_RC.SH `uname -nro`"
 git push
 	
 #	cp ./backups/.bashrc  ./backups/.bashrc.old
