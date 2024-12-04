@@ -6,7 +6,6 @@ filetype on
 filetype plugin on
 filetype indent on
 syntax on
-colorscheme meta5 
 
 set nocompatible
 set hidden
