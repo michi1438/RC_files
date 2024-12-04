@@ -21,7 +21,7 @@ do
 	then
 		cp -vr  ~/"$i" ./
 	fi
-	ln -vf "$i" ~/
+	ln -vf ./"$i" ~/
 done
 
 git add -v .
