@@ -27,7 +27,7 @@ do
 done
 
 cp -vr ./backups ~/
-mv -rv ~/backups ~/.RC_backups
+mv -v ~/backups ~/.RC_backups
 
 git add -v .
 git commit -v -m "PUSH -- UPDATE_RC.SH `uname -nro`"
