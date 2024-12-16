@@ -19,7 +19,7 @@ set -o nounset   # abort on unbound variable
 set -o pipefail  # don't hide errors within pipes#
 
 git add -v .
-git commit -v -m "PULL -- UPDATE_RC.SH `uname -nro`"
+git commit -v -m "PULL -- UPDATE_RC.SH `uname -nro`" || true
 git pull --no-rebase
 declare -a arr=(".config/qutebrowser/config.py" ".config/sway/config" \
 	".bashrc" ".lynxrc" ".xpdfrc" ".vimrc" ".bash_profile" ".gdbinit" \
