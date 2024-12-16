@@ -48,9 +48,9 @@ do
 	fi
 	if [ ! -e  "$i" ]
 	then
-		cp -vr  ~/"$i" ./
+		cp -vr  ~/"$i" ./$(dirname "$i")/
 	fi
-	ln -vf ./"$i" ~/
+	ln -vf ./"$i" ~/$(dirname "$i")/
 done
 
 mkdir ~/.RC_backups/ || true
