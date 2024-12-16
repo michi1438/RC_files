@@ -9,11 +9,11 @@ declare -a arr=(".config/qutebrowser/config.py" ".config/sway/config" ".bashrc" 
 	".lynxrc" ".xpdfrc" ".vimrc" ".bash_profile" ".gdbinit" i			\
 	".vim_clang_tidy_config")
 
-if [ ! -e "./backups/" ]; then
+if [ ! -d "./backups/" ]; then
 	mkdir ./backups/
 fi
 
-if [ ! -f "~/.vim/autoload/plug.vim" ]; then
+if [ ! -e "~/.vim/autoload/plug.vim" ]; then
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
