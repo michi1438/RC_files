@@ -46,3 +46,27 @@ P53 6.6.65-1-lts GNU/Linux
  set $browser firefox-developer-edition
  
  ### Output configuration
+Mon Dec 16 06:55:20 PM CET 2024
+P53 6.6.65-1-lts GNU/Linux
+--- ./.config/sway/config	2024-12-16 18:19:01.916918282 +0100
++++ /home/michaelthink/.config/sway/config	2024-12-16 18:26:19.846921320 +0100
+@@ -5,10 +5,8 @@
+ # Read `man 5 sway` for a complete reference.
+ 
+ input * {
+-	xkb_layout "us"
+ 	xkb_variant "dvp"
+ 	xkb_options "grp:win_space_toggle"
+-	xkb_model "microsoftsurface"
+ 	repeat_delay 300
+ 	repeat_rate 120 
+ }
+@@ -40,7 +38,7 @@
+ # Note: pass the final command to swaymsg so that the resulting window can be opened
+ # on the original workspace that the command was run on.
+ 
+-set $menu dmenu_run
++set $menu wmenu-run
+ set $browser firefox-developer-edition
+ 
+ ### Output configuration
