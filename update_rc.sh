@@ -5,7 +5,7 @@
 git add -v .
 git commit -v -m "PULL -- UPDATE_RC.SH `uname -nro`"
 git pull --no-rebase
-declare -a arr=(".config/{qutebrowser/config.py,sway/config}" ".bashrc" \
+declare -a arr=(".config/qutebrowser/config.py" ".config/sway/config" ".bashrc" \
 	".lynxrc" ".xpdfrc" ".vimrc" ".bash_profile" ".gdbinit" i			\
 	".vim_clang_tidy_config")
 
