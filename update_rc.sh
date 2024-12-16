@@ -9,7 +9,7 @@ declare -a arr=(".config/qutebrowser/config.py" ".config/sway/config" ".bashrc" 
 	".lynxrc" ".xpdfrc" ".vimrc" ".bash_profile" ".gdbinit" i			\
 	".vim_clang_tidy_config")
 
-if [ ! -d "./backups/" ]; then
+if [ ! -e "./backups/" ]; then
 	mkdir ./backups/
 fi
 
