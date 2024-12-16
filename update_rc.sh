@@ -15,7 +15,6 @@ the script has been interupted...${NC}\n"
 }
 trap finish ERR
 
-set -o errexit   # abort on nonzero exitstatus
 set -o nounset   # abort on unbound variable
 set -o pipefail  # don't hide errors within pipes#
 
@@ -39,7 +38,7 @@ fi
 
 for i in "${arr[@]}"
 do
-	IS_DIFF=$(diff -ur ./"$i" ~/"$i") || true;
+	IS_DIFF=$(diff -ur ./"$i" ~/"$i")
 	if [ ! -z "$IS_DIFF" ] ; then
 		mkdir -p $(dirname ./backups/"$i".diff) 
 		date >> ./backups/"$i".diff
