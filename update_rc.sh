@@ -54,5 +54,5 @@ cp -r ./backups/.* -t ~/.RC_backups/ || true
 cp -r ./backups/* -t ~/.RC_backups/ || true
 
 git add -v .
-git commit -v -m "PUSH -- UPDATE_RC.SH `uname -nro`"
+git commit -v -m "PUSH -- UPDATE_RC.SH `uname -nro`" || true
 git push
