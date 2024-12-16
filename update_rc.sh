@@ -46,7 +46,6 @@ do
 		uname -nro >> ./backups/"$i".diff
 		echo "${IS_DIFF}" >> ./backups/"$i".diff
 	fi
-	echo bla
 	if [ ! -e  "$i" ]
 	then
 		cp -vr  ~/"$i" ./
