@@ -41,9 +41,9 @@ for i in "${arr[@]}"
 do
 	IS_DIFF=$(diff -ur ./"$i" ~/"$i") || true;
 	if [ ! -z "$IS_DIFF" ] ; then
+		mkdir -p $(dirname ./backups/"$i".diff) 
 		date >> ./backups/"$i".diff
 		uname -nro >> ./backups/"$i".diff
-		mkdir -p $(dirname ./backups/"$i".diff) 
 		echo "${IS_DIFF}" >> ./backups/"$i".diff
 	fi
 	echo bla
