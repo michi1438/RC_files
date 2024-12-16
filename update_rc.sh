@@ -30,12 +30,13 @@ if [ ! -d "./backups/" ]; then
 	mkdir ./backups/
 fi
 
-echo bla
 
 if [ ! -f ~/.vim/autoload/plug.vim ]; then
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
+
+echo bla
 
 for i in "${arr[@]}"
 do
