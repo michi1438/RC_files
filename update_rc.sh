@@ -43,6 +43,7 @@ do
 	if [ ! -z "$IS_DIFF" ] ; then
 		date >> ./backups/"$i".diff
 		uname -nro >> ./backups/"$i".diff
+		mkdir -p $(dirname ./backups/"$i".diff) 
 		echo "${IS_DIFF}" >> ./backups/"$i".diff
 	fi
 	echo bla
