@@ -5,6 +5,7 @@
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
+
 msg_head=$(echo $0 | awk '{ print toupper($0) }')
 
 function finish {
