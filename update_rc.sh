@@ -49,7 +49,7 @@ do
 	ln -vf ./"$i" ~/
 done
 
-mkdir - ~/.RC_backups/ || true
+mkdir ~/.RC_backups/ || true
 cp -r ./backups/.* -t ~/.RC_backups/ || true
 cp -r ./backups/* -t ~/.RC_backups/ || true
 
