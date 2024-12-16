@@ -15,8 +15,9 @@ the script has been interupted...${NC}\n"
 }
 trap finish ERR
 
-set -o nounset   # abort on unbound variable
-set -o pipefail  # don't hide errors within pipes#
+set -o errexit
+set -o nounset	# abort on unbound variable
+set -o pipefail	# don't hide errors within pipes#
 
 git add -v .
 git commit -v -m "PULL -- UPDATE_RC.SH `uname -nro`" || true
@@ -38,7 +39,7 @@ fi
 
 for i in "${arr[@]}"
 do
-	IS_DIFF=$(diff -ur "./${i}" "~/${i}")
+	IS_DIFF=$(diff -ur "./${i}" "${HOME}/${i}") || true;
 	if [ ! -z "$IS_DIFF" ] ; then
 		mkdir -p $(dirname ./backups/"$i".diff) 
 		date >> ./backups/"$i".diff
