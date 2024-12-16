@@ -5,10 +5,8 @@
 # Read `man 5 sway` for a complete reference.
 
 input * {
-	xkb_layout "us"
 	xkb_variant "dvp"
 	xkb_options "grp:win_space_toggle"
-	xkb_model "microsoftsurface"
 	repeat_delay 300
 	repeat_rate 120 
 }
