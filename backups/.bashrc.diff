@@ -1,0 +1,13 @@
+Mon Dec 16 06:46:59 PM CET 2024
+P53 6.6.65-1-lts GNU/Linux
+--- ./.bashrc	2024-12-16 18:19:01.916918282 +0100
++++ /home/michaelthink/.bashrc	2024-12-16 11:18:29.143157377 +0100
+@@ -45,7 +45,7 @@
+ 	"tower")	prompt_color='\[\033[;33m\]'; info_color='\[\033[1;34m\]';;
+ 	"HOMESERVER")	prompt_color='\[\033[;33m\]'; info_color='\[\033[1;31m\]';;
+ 	"surface")	prompt_color='\[\033[;33m\]'; info_color='\[\033[1;32m\]';;
+-	"M53")	prompt_color='\[\033[;33m\]'; info_color='\[\033[1;36m\]';;
++	"P53")	prompt_color='\[\033[;33m\]'; info_color='\[\033[1;36m\]';;
+ 	*);;
+ esac
+ PS1="$prompt_color┌─$info_color(\u@\h)[\A] $prompt_color[\033[0;1m\]\w$prompt_color]\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \n$prompt_color└$info_color> \[\033[0m\]";
