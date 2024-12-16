@@ -2,6 +2,21 @@
 #
 #UPDATE_RC.SH_________________
 
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+function finish {
+	echo
+	printf "${RED}${msg_head//PART3\//} something has failed and the \
+the script has been interupted...${NC}\n"
+}
+trap finish ERR
+
+set -o errexit   # abort on nonzero exitstatus
+set -o nounset   # abort on unbound variable
+set -o pipefail  # don't hide errors within pipes#
+
 git add -v .
 git commit -v -m "PULL -- UPDATE_RC.SH `uname -nro`"
 git pull --no-rebase
@@ -33,9 +48,9 @@ do
 	ln -vf ./"$i" ~/
 done
 
-mkdir -v ~/.RC_backups/
-cp -vr ./backups/.* -t ~/.RC_backups/
-cp -vr ./backups/* -t ~/.RC_backups/
+mkdir - ~/.RC_backups/ || true
+cp -r ./backups/.* -t ~/.RC_backups/ || true
+cp -r ./backups/* -t ~/.RC_backups/ || true
 
 git add -v .
 git commit -v -m "PUSH -- UPDATE_RC.SH `uname -nro`"
