@@ -39,13 +39,13 @@ fi
 
 for i in "${arr[@]}"
 do
-	echo bla
 	IS_DIFF=$(diff -ur ./"$i" ~/"$i")
 	if [ ! -z "$IS_DIFF" ] ; then
 		date >> ./backups/"$i".diff
 		uname -nro >> ./backups/"$i".diff
 		echo "${IS_DIFF}" >> ./backups/"$i".diff
 	fi
+	echo bla
 	if [ ! -e  "$i" ]
 	then
 		cp -vr  ~/"$i" ./
