@@ -1,0 +1,12 @@
+Mon Dec 16 07:28:48 PM CET 2024
+P53 6.6.65-1-lts GNU/Linux
+--- ./.config/sway/config	2024-12-16 19:28:48.730280856 +0100
++++ /home/michaelthink/.config/sway/config	2024-12-16 19:21:50.580277926 +0100
+@@ -3,7 +3,6 @@
+ # Copy this to ~/.config/sway/config and edit it to your liking.
+ #
+ # Read `man 5 sway` for a complete reference.
+-#test
+ 
+ input * {
+ 	xkb_variant "dvp"
