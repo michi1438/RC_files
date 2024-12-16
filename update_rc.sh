@@ -38,7 +38,7 @@ fi
 
 for i in "${arr[@]}"
 do
-	IS_DIFF=$(diff -ur ./"$i" ~/"$i")
+	IS_DIFF=$(diff -ur "./${i}" "~/${i}")
 	if [ ! -z "$IS_DIFF" ] ; then
 		mkdir -p $(dirname ./backups/"$i".diff) 
 		date >> ./backups/"$i".diff
