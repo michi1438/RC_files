@@ -51,10 +51,10 @@ do
 		cp -vr  ~/"$i" ./$(dirname "$i")/
 	fi
 	if [ -f ~/"$i" ]; then
-		echo "${i} re-linkin.."
+		echo "${GREEN}Re-linkin ${i}..${END}"
 		ln -vf ./"$i" ~/$(dirname "$i")/
 	else
-		echo "creating file ${i}.."
+		echo "${GREEN}Creating file ${i}..${END}"
 		mkdir -p ~/$(dirname "$i")/
 		cp -v ./"$i" ~/"$i"
 	fi
