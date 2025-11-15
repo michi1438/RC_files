@@ -1,4 +1,6 @@
 # dv_kbd.ps1
+#TODO turn this into a script bundle to turn Windows into a usefull linux and 
+#switch it back when necessary, a stealthy-ish wsl, keyboard and misc...
 
 $methodtip = "040C:19360409"
 $dll_file = "C:\Windows\System32\kbddvp.dll"
