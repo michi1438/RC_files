@@ -50,7 +50,14 @@ do
 	then
 		cp -vr  ~/"$i" ./$(dirname "$i")/
 	fi
-	ln -vf ./"$i" ~/$(dirname "$i")/
+	if [ -f ~/"$i" ]; then
+		echo "${i} re-linkin.."
+		ln -vf ./"$i" ~/$(dirname "$i")/
+	else
+		echo "creating file ${i}.."
+		mkdir -p ~/$(dirname "$i")/
+		cp -v ./"$i" ~/"$i"
+	fi
 done
 
 mkdir ~/.RC_backups/ || true
