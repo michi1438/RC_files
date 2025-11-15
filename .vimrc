@@ -100,6 +100,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-syntastic/syntastic'
 	"change for coc some day...
 	Plug 'rafi/awesome-vim-colorschemes'
+	Plug 'reedes/vim-pencil'
 
 call plug#end()
 " Plugin code goes here.
