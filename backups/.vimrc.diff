@@ -20,3 +20,27 @@ tower 6.6.63-1-lts GNU/Linux
  set cursorline
  
  set shiftwidth=4
+Tue Dec  2 12:41:08 PM CET 2025
+tower 6.12.51-1-lts GNU/Linux
+--- /home/michaeltower/.vimrc	2025-12-02 12:39:31.386083187 +0100
++++ ./.vimrc	2025-12-02 12:29:55.446082836 +0100
+@@ -100,6 +100,7 @@
+ 	Plug 'vim-syntastic/syntastic'
+ 	"change for coc some day...
+ 	Plug 'rafi/awesome-vim-colorschemes'
++	Plug 'reedes/vim-pencil'
+ 
+ call plug#end()
+ " Plugin code goes here.
+@@ -177,11 +178,6 @@
+ endif
+ 
+ autocmd VimEnter * set formatoptions-=ro
+-
+-augroup pencil
+-  autocmd!
+-  autocmd FileType markdown,md call pencil#init({'wrap': 'soft'})
+-augroup END
+ " for return in commented sections
+ 
+ " Automatically load the session when entering vim

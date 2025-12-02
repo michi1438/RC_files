@@ -10,3 +10,16 @@ P53 6.6.65-1-lts GNU/Linux
  
  input * {
  	xkb_variant "dvp"
+Tue Dec  2 12:41:08 PM CET 2025
+tower 6.12.51-1-lts GNU/Linux
+--- /home/michaeltower/.config/sway/config	2025-02-19 12:36:23.696127269 +0100
++++ ./.config/sway/config	2024-12-16 11:18:55.009031703 +0100
+@@ -50,7 +50,7 @@
+ # Example configuration:
+ #
+ #   output HDMI-A-1 resolution 1920x1080 position 1920,0
+-#    output DP-1 resolution 1680x1050 position 0,0
++    output DP-1 resolution 1680x1050 position 0,0
+ #
+ # You can get the names of your outputs by running: swaymsg -t get_outputs
+ 
